@@ -19,7 +19,7 @@ DELIMITER $$
     DECLARE check_digit_esperado INT;
 
     -- Verifica se o NIF tem 9 caracteres e se todos são dígitos
-    IF LENGTH(nif) != 9 OR nif NOT  REGEXP '^[0-9]+$' THEN
+    IF LENGTH(nif) != 9 OR nif NOT REGEXP '^[0-9]+$' THEN
     RETURN FALSE;
     END IF;
 
