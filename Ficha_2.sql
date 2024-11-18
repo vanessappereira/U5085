@@ -121,3 +121,32 @@ SELECT
     getVictories (30, 1); -- Home victories for team with ID 30
 SELECT
     getVictories (30, 0); -- Away victories for team with ID 30
+
+/* =============== 12/11/2024 ================== */
+/* =============== 1º Exemplo ================== */
+USE EuropeFootballLeagues;
+SHOW FUNCTION STATUS WHERE db = 'EuropeFootballLeagues';
+SHOW CREATE FUNCTION getVictories;
+
+
+DELIMITER $$
+CREATE PROCEDURE ListVictories(in id int, out victories int)
+BEGIN
+    SELECT getVictories(id, true)+ getVictories(id, false)
+
+
+
+    WHERE(HomeTeam_id=id and HomeScore>AwayScore) or (AwayTeam_id=id and AwayScore>HomeScore);
+end $$
+DELIMITER ;
+
+call ListVictories(1,@vict);
+SELECT @vict;
+
+/* =============== 2º Exemplo ================== */
+DELIMITER $$
+CREATE PROCEDURE ListMatches()
+SELECT getTeamName(HomeTeam_id) HomeTeam, HomeScore, getTeamName(AwayTeam_id) AwayTeam, AwayScore, DATE FROM Matches
+WHERE HomeScore IS NOT NULL AND AwayScore IS NOT NULL;
+
+
