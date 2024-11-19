@@ -17,7 +17,7 @@ Crie uma função que determine se um número de contribuinte recebido como argu
 ### Exemplo de Cálculo
 
 - **NIF**: 501903623
-- **Cálculo**: 9*5 + 8*0 + 7*1 + 6*9 + 5*0 + 4*3 + 3*6 + 2*2 = 140
+- **Cálculo**: 9x5 + 8x0 + 7x1 + 6x9 + 5x0 + 4x3 + 3x6 + 2x2 = 140
 - **Resto**: 140 % 11 = 8
 - **Check Digit**: 11 - 8 = 3
 - O NIF é válido porque o resultado corresponde ao "check digit".
