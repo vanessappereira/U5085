@@ -28,7 +28,7 @@ Crie uma função que determine se um número de contribuinte recebido como argu
 
 ## Ficha 5: Índices e Funções Diversas
 
-1. Faça   a   criação   de   índices   para   as   tabelas  country(country),  city(city)   e  airport(airport,IATA_FAA,ICAO) da base de dados Airport.
+1. Faça a criação de índices para as tabelas country(country), city(city) e airport(airport,IATA_FAA,ICAO) da base de dados Airport.
 2. Crie uma função que receba um número de um cartão de crédito. A função deve devolver uma String com os últimos 4 dígitos visíveis e os restantes dígitos substituídos por um asterisco.
 3. Crie uma função que receba uma data e que calcule a idade em anos completos.
 4. Crie uma função que receba um nome completo e que devolva uma String com o primeiro e último nome
